@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fatma Aydın Kuaför & Güzellik Merkezi | Çukurova Adana</title>
+  <meta name="description" content="Fatma Aydın Kuaför & Güzellik Merkezi — Çukurova Adana'da saç tasarımı, renklendirme, bakım, profesyonel makyaj ve güzellik uygulamaları için randevu ve iletişim.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #f7f3ed;
+      --paper: #eee7de;
+      --taupe: #b7a99a;
+      --espresso: #382b25;
+      --charcoal: #1e1c1a;
+      --white: #fff;
+      --line: rgba(56,43,37,.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--espresso);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      font-size: .72rem;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    h2 {
+      font-size: clamp(2.4rem, 6vw, 5.3rem);
+    }
+
+    .announcement {
+      background: var(--espresso);
+      color: var(--white);
+      text-align: center;
+      padding: 9px 15px;
+      font-size: .69rem;
+      letter-spacing: .16em;
+    }
+
+    header {
+      position: absolute;
+      width: 100%;
+      z-index: 20;
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,.25);
+    }
+
+    nav {
+      width: min(1320px, 94%);
+      margin: auto;
+      height: 94px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo strong {
+      font-family: "Playfair Display", serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: .08em;
+    }
+
+    .logo small {
+      margin-top: 8px;
+      font-size: .54rem;
+      letter-spacing: .35em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      font-size: .76rem;
+      letter-spacing: .08em;
+    }
+
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding: 0 27px;
+      border: 1px solid currentColor;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .7rem;
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+    .nav-cta:hover {
+      background: var(--white);
+      color: var(--espresso);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: inherit;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 91vh;
+      color: var(--white);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 160px 0 90px;
+      background:
+        linear-gradient(90deg, rgba(25,18,15,.74), rgba(25,18,15,.20)),
+        url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=85") center/cover;
+    }
+
+    .hero-content {
+      width: min(1320px, 90%);
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.7rem, 9vw, 8rem);
+      max-width: 900px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 em {
+      font-weight: 400;
+    }
+
+    .hero p {
+      max-width: 560px;
+      font-weight: 300;
+      font-size: 1.05rem;
+      margin-bottom: 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--espresso);
+      border-color: var(--white);
+    }
+
+    .btn-light:hover {
+      background: transparent;
+      color: var(--white);
+    }
+
+    .btn-outline {
+      color: var(--white);
+    }
+
+    .intro {
+      padding: 130px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .intro-copy p {
+      max-width: 590px;
+      margin: 28px 0;
+      color: #5e554f;
+      font-size: 1.02rem;
+    }
+
+    .text-link {
+      display: inline-block;
+      border-bottom: 1px solid;
+      padding-bottom: 4px;
+      font-size: .74rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .services {
+      background: var(--espresso);
+      color: var(--white);
+      padding: 120px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 65px;
+    }
+
+    .section-heading p {
+      max-width: 430px;
+      color: rgba(255,255,255,.67);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+
+    .service {
+      padding: 38px 26px 45px;
+      border-right: 1px solid rgba(255,255,255,.2);
+    }
+
+    .service:first-child {
+      padding-left: 0;
+    }
+
+    .service:last-child {
+      border-right: 0;
+    }
+
+    .service-number {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      opacity: .55;
+    }
+
+    .service h3 {
+      font-size: 2.15rem;
+      margin: 40px 0 24px;
+    }
+
+    .service ul {
+      list-style: none;
+      color: rgba(255,255,255,.67);
+      font-size: .9rem;
+    }
+
+    .service li {
+      padding: 6px 0;
+    }
+
+    .editorial {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      min-height: 760px;
+    }
+
+    .editorial-image {
+      background:
+        url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1300&q=85")
+        center/cover;
+      min-height: 650px;
+    }
+
+    .editorial-copy {
+      background: var(--paper);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(50px, 8vw, 120px);
+    }
+
+    .editorial-copy p {
+      color: #665b54;
+      margin: 30px 0 35px;
+      max-width: 520px;
+    }
+
+    .bridal {
+      padding: 120px 0;
+    }
+
+    .bridal-card {
+      min-height: 680px;
+      display: flex;
+      align-items: flex-end;
+      color: var(--white);
+      padding: clamp(35px, 7vw, 85px);
+      background:
+        linear-gradient(0deg, rgba(30,20,16,.68), rgba(30,20,16,.05)),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .bridal-card div {
+      max-width: 700px;
+    }
+
+    .bridal-card h2 {
+      margin-bottom: 24px;
+    }
+
+    .bridal-card p {
+      max-width: 540px;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      padding: 40px 0 130px;
+    }
+
+    .gallery-heading {
+      margin-bottom: 50px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr .9fr;
+      grid-template-rows: 330px 330px;
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      height: 100%;
+    }
+
+    .gallery-grid img:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .gallery-grid img:nth-child(4) {
+      grid-column: 2 / 4;
+    }
+
+    .experience {
+      background: var(--paper);
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .experience p {
+      max-width: 650px;
+      margin: 30px auto 0;
+      color: #665b54;
+    }
+
+    .contact {
+      padding: 120px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 90px;
+    }
+
+    .contact-details {
+      margin-top: 45px;
+      display: grid;
+      gap: 26px;
+    }
+
+    .contact-details span {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #8b7c72;
+      margin-bottom: 5px;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+      padding: 18px 4px;
+      color: var(--charcoal);
+      border-radius: 0;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-btn {
+      margin-top: 20px;
+      background: var(--espresso);
+      color: var(--white);
+      border: 1px solid var(--espresso);
+    }
+
+    .form-note {
+      font-size: .72rem;
+      color: #7d7068;
+    }
+
+    .final-cta {
+      background: var(--charcoal);
+      color: var(--white);
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .final-cta h2 {
+      max-width: 850px;
+      margin: 0 auto 35px;
+    }
+
+    footer {
+      background: #151311;
+      color: rgba(255,255,255,.72);
+      padding: 70px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 65px;
+    }
+
+    .footer-logo {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    footer h4 {
+      color: var(--white);
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    footer ul {
+      list-style: none;
+      font-size: .86rem;
+    }
+
+    footer li {
+      margin: 8px 0;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: .7rem;
+    }
+
+    .sticky-book {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        position: fixed;
+        inset: 0;
+        background: var(--espresso);
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.1rem;
+        transform: translateX(100%);
+        transition: .3s ease;
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+        position: relative;
+        z-index: 30;
+      }
+
+      .intro-grid,
+      .contact-grid,
+      .editorial {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-grid {
+        gap: 35px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .service {
+        border-bottom: 1px solid rgba(255,255,255,.2);
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading p {
+        margin-top: 25px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px 260px 260px;
+      }
+
+      .gallery-grid img:first-child {
+        grid-row: auto;
+      }
+
+      .gallery-grid img:nth-child(4) {
+        grid-column: 1 / 3;
+      }
+
+      .contact-grid {
+        gap: 60px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .announcement {
+        font-size: .58rem;
+      }
+
+      nav {
+        height: 76px;
+      }
+
+      .hero {
+        min-height: 84vh;
+        padding-bottom: 60px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.2rem, 17vw, 5rem);
+      }
+
+      .intro, .services, .bridal, .experience, .contact {
+        padding-top: 85px;
+        padding-bottom: 85px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service {
+        padding: 30px 0;
+        border-right: 0;
+      }
+
+      .editorial-image {
+        min-height: 470px;
+      }
+
+      .editorial-copy {
+        padding: 70px 6%;
+      }
+
+      .bridal-card {
+        min-height: 620px;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 360px);
+      }
+
+      .gallery-grid img:nth-child(4) {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        padding-bottom: 65px;
+      }
+
+      .sticky-book {
+        display: flex;
+        position: fixed;
+        z-index: 50;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        background: var(--espresso);
+        color: var(--white);
+        justify-content: center;
+        align-items: center;
+        min-height: 54px;
+        box-shadow: 0 10px 35px rgba(0,0,0,.25);
+        font-size: .72rem;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    ÇUKUROVA · ADANA &nbsp;&nbsp;|&nbsp;&nbsp; RANDEVU: 0537 505 34 76
+  </div>
+
+  <header>
+    <nav>
+      <a href="#home" class="logo" aria-label="Fatma Aydın ana sayfa">
+        <strong>FATMA AYDIN</strong>
+        <small>HAIR & BEAUTY</small>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#services">Hizmetler</a></li>
+        <li><a href="#bridal">Bridal</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+
+      <a class="nav-cta"
+         href="https://wa.me/905375053476?text=Merhaba%20Fatma%20Ayd%C4%B1n%20Kuaf%C3%B6r%20%26%20G%C3%BCzellik%20Merkezi%2C%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">
+         Randevu Al
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Fatma Aydın · Hair & Beauty</p>
+
+        <h1>
+          Güzelliğin,<br>
+          <em>sana özel yorumu.</em>
+        </h1>
+
+        <p>
+          Saç tasarımından profesyonel makyaja, bakım uygulamalarından
+          özel gün hazırlığına kadar güzelliğin her detayını tek bir
+          deneyimde keşfedin.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-light"
+             href="https://wa.me/905375053476?text=Merhaba%20Fatma%20Ayd%C4%B1n%20Kuaf%C3%B6r%20%26%20G%C3%BCzellik%20Merkezi%2C%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">
+            Randevu Al
+          </a>
+
+          <a class="btn btn-outline" href="#services">
+            Hizmetleri Keşfet
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <div class="container intro-grid">
+
+        <div>
+          <p class="eyebrow">Fatma Aydın</p>
+          <h2>Saç & güzellik,<br>tek bir deneyimde.</h2>
+        </div>
+
+        <div class="intro-copy">
+          <p>
+            Saç kesimi ve tasarımından renklendirme ve bakıma;
+            profesyonel makyajdan cilt ve kirpik uygulamalarına kadar
+            farklı güzellik ihtiyaçlarını aynı çatı altında buluşturan
+            kapsamlı bir hizmet deneyimi.
+          </p>
+
+          <p>
+            Günlük görünümünüzü yenilemek, özel bir güne hazırlanmak
+            veya kendinize zaman ayırmak için hizmetlerimizi keşfedin.
+          </p>
+
+          <a href="#services" class="text-link">Tüm hizmetleri incele</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Hizmetler</p>
+            <h2>Güzelliğin<br>her detayı.</h2>
+          </div>
+
+          <p>
+            Saçtan makyaja, güzellik uygulamalarından özel gün
+            hazırlığına kadar farklı ihtiyaçlara yönelik hizmetler.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service">
+            <span class="service-number">01 — SAÇ</span>
+            <h3>Hair</h3>
+            <ul>
+              <li>Kesim & Tasarım</li>
+              <li>Renklendirme</li>
+              <li>Ombre</li>
+              <li>Saç Açma</li>
+              <li>Saç Bakımı</li>
+              <li>Kaynak Saç</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <span class="service-number">02 — MAKEUP</span>
+            <h3>Makeup</h3>
+            <ul>
+              <li>Profesyonel Makyaj</li>
+              <li>Özel Gün Makyajı</li>
+              <li>Gelin Makyajı</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <span class="service-number">03 — BEAUTY</span>
+            <h3>Beauty</h3>
+            <ul>
+              <li>Cilt Bakımı</li>
+              <li>Hydrafacial</li>
+              <li>Dermapen</li>
+              <li>Microblading</li>
+              <li>Kirpik Lifting</li>
+              <li>İpek Kirpik</li>
+              <li>Protez Tırnak</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <span class="service-number">04 — BRIDAL</span>
+            <h3>Bridal</h3>
+            <ul>
+              <li>Gelin Saçı</li>
+              <li>Gelin Makyajı</li>
+              <li>Özel Gün Hazırlığı</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial">
+      <div class="editorial-image" role="img" aria-label="Temsili profesyonel saç tasarımı görseli"></div>
+
+      <div class="editorial-copy">
+        <p class="eyebrow">Hair Studio</p>
+        <h2>Görünümünüzü<br>yeniden yorumlayın.</h2>
+
+        <p>
+          Kesim, renk, ombre, bakım ve kaynak saç seçenekleriyle
+          tarzınıza uygun görünümü keşfedin. Hizmet detayları ve
+          randevu uygunluğu için doğrudan iletişime geçebilirsiniz.
+        </p>
+
+        <a class="text-link"
+           href="https://wa.me/905375053476?text=Merhaba%2C%20sa%C3%A7%20hizmetleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">
+          Bilgi Al
+        </a>
+      </div>
+    </section>
+
+    <section class="bridal" id="bridal">
+      <div class="container">
+
+        <div class="bridal-card">
+          <div>
+            <p class="eyebrow">Bridal Experience</p>
+            <h2>En özel gününüz,<br>en özel haliniz.</h2>
+
+            <p>
+              Gelin saçı ve profesyonel makyaj uygulamalarını,
+              size özel bir hazırlık deneyimiyle tamamlayın.
+            </p>
+
+            <a class="btn btn-light"
+               href="https://wa.me/905375053476?text=Merhaba%2C%20gelin%20sa%C3%A7%C4%B1%20ve%20makyaj%C4%B1%20i%C3%A7in%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">
+              Bridal Randevusu
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+
+        <div class="gallery-heading">
+          <p class="eyebrow">Inspiration</p>
+          <h2>Güzellik,<br>detaylarda.</h2>
+        </div>
+
+        <!-- Satış önizlemesinde temsili görseller kullanılmaktadır.
+             İşletme onayı sonrası gerçek salon görselleriyle değiştirilmelidir. -->
+
+        <div class="gallery-grid">
+          <img loading="lazy"
+               src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=80"
+               alt="Temsili saç tasarımı görseli">
+
+          <img loading="lazy"
+               src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=80"
+               alt="Temsili kuaför salonu görseli">
+
+          <img loading="lazy"
+               src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=80"
+               alt="Temsili saç bakım görseli">
+
+          <img loading="lazy"
+               src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=80"
+               alt="Temsili güzellik salonu görseli">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="experience">
+      <div class="container">
+        <p class="eyebrow">Salon Experience</p>
+        <h2>Size ayrılan zaman.</h2>
+
+        <p>
+          Kendinize ayırdığınız zamanı, ihtiyaçlarınıza uygun saç ve
+          güzellik hizmetleriyle tamamlayın. Uygun hizmet ve randevu
+          seçenekleri için salonla iletişime geçin.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+
+        <div>
+          <p class="eyebrow">İletişim & Randevu</p>
+          <h2>Bir sonraki<br>görünümünüz.</h2>
+
+          <div class="contact-details">
+            <div>
+              <span>Telefon</span>
+              <a href="tel:+905375053476">0537 505 34 76</a>
+            </div>
+
+            <div>
+              <span>Konum</span>
+              <p>100. Yıl Mahallesi · Çukurova / Adana</p>
+            </div>
+
+            <div>
+              <span>Çalışma Saatleri</span>
+              <p>Pazartesi – Cumartesi<br>08:30 – 19:00</p>
+              <p>Pazar: Bilgi için iletişime geçin</p>
+            </div>
+
+            <div>
+              <span>Harita</span>
+              <a class="text-link"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 href="https://www.google.com/maps/search/?api=1&query=Fatma+Ayd%C4%B1n+Kuaf%C3%B6r+G%C3%BCzellik+Merkezi+%C3%87ukurova+Adana">
+                Google Maps'te Aç
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="appointmentForm">
+            <input id="name" type="text" placeholder="Ad Soyad" required aria-label="Ad Soyad">
+
+            <input id="phone" type="tel" placeholder="Telefon" required aria-label="Telefon">
+
+            <select id="service" required aria-label="İlgilendiğiniz hizmet">
+              <option value="">İlgilendiğiniz Hizmet</option>
+              <option>Saç Kesimi & Tasarım</option>
+              <option>Renklendirme / Ombre</option>
+              <option>Saç Bakımı</option>
+              <option>Kaynak Saç</option>
+              <option>Profesyonel Makyaj</option>
+              <option>Gelin Saçı & Makyajı</option>
+              <option>Cilt Bakımı</option>
+              <option>Kirpik Uygulamaları</option>
+              <option>Protez Tırnak</option>
+              <option>Diğer</option>
+            </select>
+
+            <textarea id="message" placeholder="Mesajınız" aria-label="Mesajınız"></textarea>
+
+            <button type="submit" class="btn form-btn">
+              Randevu Talebi Oluştur
+            </button>
+
+            <p class="form-note">
+              Form gönderildiğinde randevu talebiniz WhatsApp üzerinden hazırlanır.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <p class="eyebrow">Fatma Aydın · Hair & Beauty</p>
+      <h2>Yeni görünümünüz<br>bir randevu uzağınızda.</h2>
+
+      <a class="btn btn-light"
+         href="https://wa.me/905375053476?text=Merhaba%20Fatma%20Ayd%C4%B1n%20Kuaf%C3%B6r%20%26%20G%C3%BCzellik%20Merkezi%2C%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">
+        WhatsApp'tan Randevu Al
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="logo footer-logo">
+            <strong>FATMA AYDIN</strong>
+            <small>HAIR & BEAUTY</small>
+          </div>
+
+          <p>Çukurova · Adana</p>
+        </div>
+
+        <div>
+          <h4>Keşfet</h4>
+          <ul>
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#services">Hizmetler</a></li>
+            <li><a href="#bridal">Bridal</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>İletişim</h4>
+          <ul>
+            <li><a href="tel:+905375053476">0537 505 34 76</a></li>
+            <li>Çukurova / Adana</li>
+            <li>Pzt – Cmt · 08:30–19:00</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Fatma Aydın Hair & Beauty</span>
+        <span id="previewNotice">Web sitesi tasarım önizlemesi.</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <a class="sticky-book"
+     href="https://wa.me/905375053476?text=Merhaba%20Fatma%20Ayd%C4%B1n%20Kuaf%C3%B6r%20%26%20G%C3%BCzellik%20Merkezi%2C%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">
+    WhatsApp · Randevu Al
+  </a>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      document.body.classList.toggle("menu-open", open);
+      menuBtn.setAttribute("aria-expanded", open);
+      menuBtn.textContent = open ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("#navLinks a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value.trim();
+
+      const text =
+        `Merhaba Fatma Aydın Kuaför & Güzellik Merkezi,%0A%0A` +
+        `Randevu hakkında bilgi almak istiyorum.%0A%0A` +
+        `Ad Soyad: ${encodeURIComponent(name)}%0A` +
+        `Telefon: ${encodeURIComponent(phone)}%0A` +
+        `Hizmet: ${encodeURIComponent(service)}%0A` +
+        `Mesaj: ${encodeURIComponent(message || "-")}`;
+
+      window.open(`https://wa.me/905375053476?text=${text}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
